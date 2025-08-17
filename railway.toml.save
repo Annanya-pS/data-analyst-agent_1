@@ -1,0 +1,15 @@
+[build]
+builder = "dockerfile"
+
+[deploy]
+startCommand = "gunicorn --bind 0.0.0.0:$PORT --timeout 300 --workers 2 app:app"
+healthcheckPath = "/health"
+healthcheckTimeout = 300
+
+[build]
+builder = "dockerfile"
+
+[deploy]
+startCommand = "gunicorn --bind 0.0.0.0:$PORT --timeout 300 --workers 2 app:app"
+healthcheckPath = "/health"
+healthcheckTimeout = 300
